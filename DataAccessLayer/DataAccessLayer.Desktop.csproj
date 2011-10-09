@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5310C52-4B00-46CB-A646-E26013A0C842}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Wrappers.Extended\ComplexPropertyPathWrapper.cs" />
+    <Compile Include="Wrappers.Extended\ComplexPropertyWrapper.cs" />
+    <Compile Include="Wrappers.Extended\MultiPropertyWrapper.cs" />
+    <Compile Include="Wrappers.Extended\SinglePropertyPathWrapper.cs" />
+    <Compile Include="Wrappers.Extended\SinglePropertyWrapper.cs" />
+    <Compile Include="Wrappers.Extended\StaticIndexPropertyWrapper.cs" />
+    <Compile Include="Wrappers.Extended\TypePropertyWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.Desktop.cs" />
+    <Compile Include="Wrappers.Base\ClassWrappers.ClassWrapperGenerator.cs" />
+    <Compile Include="Wrappers.Base\ClassWrappers.cs" />
+    <Compile Include="Wrappers.Base\ClassWrappers.PropertyWrapperGenerator.cs" />
+    <Compile Include="Wrappers.Base\IClassWrapper.cs" />
+    <Compile Include="Wrappers.Base\IPropertyWrapper.cs" />
+    <Compile Include="Wrappers.Base\PropertyWrapperCollection.cs" />
+    <Compile Include="Wrappers.Base\Result.cs" />
+    <Compile Include="Wrappers.Base\State.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
